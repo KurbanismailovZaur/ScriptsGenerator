@@ -72,19 +72,19 @@ namespace Extensions.Editor
             ProjectWindowUtil.CreateScriptAssetFromTemplateFile(templatePath, assetName);
         }
 
-        [MenuItem("Assets/Create/C# MonoBehaviour", priority = 75)]
+        [MenuItem("Assets/Create/C# MonoBehaviour", priority = 60)]
         private static void CreateScript() => CheckAndCreate("ScriptTemplate.txt", "NewBehaviourScript.cs");
 
-        [MenuItem("Assets/Create/C# Class", priority = 76)]
+        [MenuItem("Assets/Create/C# Class", priority = 61)]
         private static void CreateClass() => CheckAndCreate("ClassTemplate.txt", "NewClass.cs");
 
-        [MenuItem("Assets/Create/C# Struct", priority = 77)]
+        [MenuItem("Assets/Create/C# Struct", priority = 62)]
         private static void CreateStruct() => CheckAndCreate("StructTemplate.txt", "NewStruct.cs");
 
-        [MenuItem("Assets/Create/C# Interface", priority = 78)]
+        [MenuItem("Assets/Create/C# Interface", priority = 63)]
         private static void CreateInterface() => CheckAndCreate("InterfaceTemplate.txt", "NewInterface.cs");
 
-        [MenuItem("Assets/Create/C# Enum", priority = 79)]
+        [MenuItem("Assets/Create/C# Enum", priority = 64)]
         private static void CreateEnum() => CheckAndCreate("EnumTemplate.txt", "NewEnum.cs");
     }
 }
