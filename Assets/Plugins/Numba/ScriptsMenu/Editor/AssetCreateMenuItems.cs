@@ -22,7 +22,7 @@ namespace Extensions.Editor
                 "using System.Linq;\n" +
                 "using UnityEngine;\n";
 
-            var pluginsPath = Path.Combine(Application.dataPath, "Plugins", "Mental");
+            var pluginsPath = Path.Combine(Application.dataPath, "Plugins", "Numba");
 
             if (Directory.Exists(Path.Combine(pluginsPath, "Extensions")))
                 namespaces += "using Extensions;\n";
@@ -65,9 +65,7 @@ namespace Extensions.Editor
                 Directory.CreateDirectory(templatesPath);
 
             var templatePath = Path.Combine(templatesPath, templateName);
-
-            if (!File.Exists(templatePath))
-                File.WriteAllText(templatePath, tempaltes[templateName]);
+            File.WriteAllText(templatePath, tempaltes[templateName]);
 
             ProjectWindowUtil.CreateScriptAssetFromTemplateFile(templatePath, assetName);
         }

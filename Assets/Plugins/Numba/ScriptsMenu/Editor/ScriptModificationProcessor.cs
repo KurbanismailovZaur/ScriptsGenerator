@@ -23,11 +23,14 @@ namespace Extensions.Editor
 
             var index = path.LastIndexOf(Path.DirectorySeparatorChar);
             path = index == -1 ? string.Empty : path.Substring(0, index);
-            
+
             index = path.LastIndexOf("Scripts");
 
             if (index != -1)
-                path = index + "Scripts".Length == path.Length ? string.Empty : path.Substring(index + "Scripts".Length + 1);
+            {
+                if ((index == 0 || path[index - 1] == Path.DirectorySeparatorChar) && (index + "Scripts".Length == path.Length || path[index + "Scripts".Length] == Path.DirectorySeparatorChar))
+                    path = index + "Scripts".Length == path.Length ? string.Empty : path.Substring(index + "Scripts".Length + 1);
+            }
 
             path = path.Replace(Path.DirectorySeparatorChar, '.');
 
