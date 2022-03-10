@@ -20,7 +20,7 @@ The screenshot below shows the generation of the `SomeClass` template called wit
 
 However, if you create a template in a subfolder (1), it will be included in the generated namespace path (2). 
 
-![image](https://user-images.githubusercontent.com/5365111/157711987-0c4e0cef-7357-441c-ba04-6e067e601668.png)
+![image](https://user-images.githubusercontent.com/5365111/157768183-5cdad1c8-3339-4412-be1a-5c559bc295da.png)
 
 This approach allows you to avoid wasting time changing the generated code templates; instead, you get what you want to create right away.
 
