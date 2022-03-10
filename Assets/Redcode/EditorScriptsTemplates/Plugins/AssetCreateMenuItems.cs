@@ -29,8 +29,7 @@ namespace Extensions.Editor
 
             if (Directory.Exists(Path.Combine(redcodePath, "Moroutines")))
                 namespaces += "using Redcode.Moroutines;\n" +
-                "using Redcode.Moroutines.Extensions;\n" +
-                "using Object = UnityEngine.Object;\n";
+                "using Redcode.Moroutines.Extensions;\n";
 
             var before = namespaces + "\nnamespace #NAMESPACE#\n{\n";
 
