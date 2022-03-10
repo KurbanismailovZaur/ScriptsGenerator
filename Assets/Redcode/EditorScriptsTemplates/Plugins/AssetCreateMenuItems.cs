@@ -22,14 +22,14 @@ namespace Extensions.Editor
                 "using System.Linq;\n" +
                 "using UnityEngine;\n";
 
-            var redcodePath = Path.Combine(Application.dataPath, "Plugins", "Redcode");
+            var redcodePath = Path.Combine(Application.dataPath, "Redcode");
 
             if (Directory.Exists(Path.Combine(redcodePath, "Extensions")))
-                namespaces += "using Extensions;\n";
+                namespaces += "using Redcode.Extensions;\n";
 
             if (Directory.Exists(Path.Combine(redcodePath, "Moroutines")))
-                namespaces += "using Moroutines;\n" +
-                "using Moroutines.Extensions;\n" +
+                namespaces += "using Redcode.Moroutines;\n" +
+                "using Redcode.Moroutines.Extensions;\n" +
                 "using Object = UnityEngine.Object;\n";
 
             var before = namespaces + "\nnamespace #NAMESPACE#\n{\n";
